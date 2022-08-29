@@ -2,16 +2,16 @@ package main
 
 import "fmt"
 func main(){
-	tabung()
-	// var pi float64 = 3.14
-	// var inputr float64
-	// var inputt float64
-	// var res float64
+	// tabung()
+	var pi float64 = 3.14
+	var inputr float64
+	var inputt float64
+	var res float64
 
-	// fmt.Println("Masukkan jari jari dan tinggi tabung: ")
-	// fmt.Scanf("%f", &inputr, &inputt)
-	// res = (2*pi*inputr*inputr) + (2*pi*inputr*inputt)
-	// fmt.Println(res)
+	fmt.Println("Masukkan jari jari lalu enter dan masukkan tinggi tabung: ")
+	fmt.Scanf("%f\n%f", &inputr, &inputt)
+	res = (2*pi*inputr*inputr) + (2*pi*inputr*inputt)
+	fmt.Println(res)
 
 }
 
