@@ -3,7 +3,9 @@ package main
 import "fmt"
 func main(){
 	// tabung()
-	gradenilai()
+	// gradenilai()
+	faktorbilangan()
+
 	// var pi float64 = 3.14
 	// var inputr float64
 	// var inputt float64
@@ -28,6 +30,7 @@ func tabung(){
 }
 
 func gradenilai(){
+	//Problem 2
 	var studentScore int 
 	var nama string
 
@@ -52,4 +55,21 @@ func gradenilai(){
 	} else {
 		fmt.Println("Nilai Invalid")
 	}
+}
+
+func faktorbilangan(){
+	var n int 
+	fmt.Print("Input: ")
+	fmt.Scanf("%d", &n)
+	fmt.Println("Output: ")
+	if n > 1{
+		for i := 1; i <= n; i++ {
+			if n % i == 0 {
+				fmt.Println(i)
+			}
+		}
+	} else {
+		fmt.Println("Angka harus lebih besar dari 1")
+	}
+	
 }
