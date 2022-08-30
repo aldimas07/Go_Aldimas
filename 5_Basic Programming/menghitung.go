@@ -1,17 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// tabung()
 	// gradenilai()
 	// faktorbilangan()
 
-	fmt.Println(palindrome("civic"))
-	fmt.Println(palindrome("katak"))
-	fmt.Println(palindrome("kasur rusak"))
-	fmt.Println(palindrome("mistar"))
-	fmt.Println(palindrome("lion"))
+	// Output eksponen
+	fmt.Println(pangkat(2, 3))
+	fmt.Println(pangkat(5, 3))
+	fmt.Println(pangkat(10, 2))
+	fmt.Println(pangkat(2, 5))
+	fmt.Println(pangkat(7, 3))
+
+	// output palindrome
+	// fmt.Println(palindrome("civic"))
+	// fmt.Println(palindrome("katak"))
+	// fmt.Println(palindrome("kasur rusak"))
+	// fmt.Println(palindrome("mistar"))
+	// fmt.Println(palindrome("lion"))
 
 	// output bilangan prima
 	// fmt.Println(primeNumber(11))
@@ -125,4 +135,16 @@ func palindrome(input string) bool {
 	}
 	fmt.Println("Palindrome")
 	return true
+}
+
+func pangkat(base, pangkat int) int {
+	var nilai int
+	var total int = 1
+	nilai = base
+	for x := 0; x < pangkat; x++ {
+		total = total * nilai
+	}
+	return total
+
+	// res := int(math.Pow(base, pangkat))
 }
