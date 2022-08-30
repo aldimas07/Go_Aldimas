@@ -9,12 +9,13 @@ func main() {
 	// gradenilai()
 	// faktorbilangan()
 
+	playWithAsterik(5)
 	// Output eksponen
-	fmt.Println(pangkat(2, 3))
-	fmt.Println(pangkat(5, 3))
-	fmt.Println(pangkat(10, 2))
-	fmt.Println(pangkat(2, 5))
-	fmt.Println(pangkat(7, 3))
+	// fmt.Println(pangkat(2, 3))
+	// fmt.Println(pangkat(5, 3))
+	// fmt.Println(pangkat(10, 2))
+	// fmt.Println(pangkat(2, 5))
+	// fmt.Println(pangkat(7, 3))
 
 	// output palindrome
 	// fmt.Println(palindrome("civic"))
@@ -146,5 +147,29 @@ func pangkat(base, pangkat int) int {
 	}
 	return total
 
-	// res := int(math.Pow(base, pangkat))
+}
+
+func playWithAsterik(n int) {
+
+	var temp int = 1
+
+	for i := 0; i < n; i++ {
+
+		for j := 1; j <= n; j++ {
+			fmt.Print(" ")
+		}
+
+		for k := 0; k <= i; k++ {
+
+			if k == 0 || i == 0 {
+				temp = 1
+			} else {
+				temp = temp * (i - k + 1) / k
+			}
+
+			fmt.Printf("%d", temp)
+		}
+		fmt.Println(" ")
+	}
+
 }
