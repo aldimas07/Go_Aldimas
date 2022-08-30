@@ -8,8 +8,9 @@ func main() {
 	// tabung()
 	// gradenilai()
 	// faktorbilangan()
+	// playWithAsterik(5)
 
-	playWithAsterik(5)
+	cetakTabelPerkalian(9)
 	// Output eksponen
 	// fmt.Println(pangkat(2, 3))
 	// fmt.Println(pangkat(5, 3))
@@ -159,5 +160,17 @@ func playWithAsterik(n int) {
 			fmt.Print("* ")
 		}
 		fmt.Println()
+	}
+}
+
+func cetakTabelPerkalian(number int) {
+	var res int
+	for i := 1; i < number; i++ {
+
+		for j := 1; j <= number; j++ {
+			res = number
+			fmt.Print(res)
+		}
+		fmt.Printf("\n")
 	}
 }
