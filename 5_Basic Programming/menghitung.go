@@ -151,25 +151,13 @@ func pangkat(base, pangkat int) int {
 
 func playWithAsterik(n int) {
 
-	var temp int = 1
-
-	for i := 0; i < n; i++ {
-
-		for j := 1; j <= n; j++ {
+	for x := 1; x <= n; x++ {
+		for y := n; y >= x; y-- {
 			fmt.Print(" ")
 		}
-
-		for k := 0; k <= i; k++ {
-
-			if k == 0 || i == 0 {
-				temp = 1
-			} else {
-				temp = temp * (i - k + 1) / k
-			}
-
-			fmt.Printf("%d", temp)
+		for z := 1; z <= x; z++ {
+			fmt.Print("* ")
 		}
-		fmt.Println(" ")
+		fmt.Println()
 	}
-
 }
