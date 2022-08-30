@@ -7,11 +7,18 @@ func main() {
 	// gradenilai()
 	// faktorbilangan()
 
-	fmt.Println(primeNumber(11))
-	fmt.Println(primeNumber(13))
-	fmt.Println(primeNumber(17))
-	fmt.Println(primeNumber(20))
-	fmt.Println(primeNumber(35))
+	fmt.Println(palindrome("civic"))
+	fmt.Println(palindrome("katak"))
+	fmt.Println(palindrome("kasur rusak"))
+	fmt.Println(palindrome("mistar"))
+	fmt.Println(palindrome("lion"))
+
+	// output bilangan prima
+	// fmt.Println(primeNumber(11))
+	// fmt.Println(primeNumber(13))
+	// fmt.Println(primeNumber(17))
+	// fmt.Println(primeNumber(20))
+	// fmt.Println(primeNumber(35))
 
 	// menghitung luas permukaan tabung
 	// var pi float64 = 3.14
@@ -101,4 +108,21 @@ func primeNumber(number int) bool {
 
 	}
 
+}
+
+func palindrome(input string) bool {
+	var reversed string = ""
+
+	for i := len(input) - 1; i >= 0; i-- {
+		reversed += string(input[i])
+	}
+
+	for i := range input {
+		if input[i] != reversed[i] {
+			fmt.Println("Bukan Palindrome")
+			return false
+		}
+	}
+	fmt.Println("Palindrome")
+	return true
 }
