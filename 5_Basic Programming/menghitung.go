@@ -165,11 +165,12 @@ func playWithAsterik(n int) {
 
 func cetakTabelPerkalian(number int) {
 	var res int
-	for i := 1; i < number; i++ {
+	for i := 1; i <= number-1; i++ {
 
-		for j := 1; j <= number; j++ {
-			res = number
-			fmt.Print(res)
+		fmt.Print(i, "\t")
+		for j := 2; j <= number; j++ {
+			res = j * i
+			fmt.Print(res, "\t")
 		}
 		fmt.Printf("\n")
 	}
