@@ -6,17 +6,17 @@ import (
 )
 
 func main() {
-	// fmt.Println(pow(2, 3))
-	// fmt.Println(pow(5, 3))
-	// fmt.Println(pow(10, 2))
-	// fmt.Println(pow(2, 5))
-	// fmt.Println(pow(7, 3))
+	fmt.Println(pow(2, 3))
+	fmt.Println(pow(5, 3))
+	fmt.Println(pow(10, 2))
+	fmt.Println(pow(2, 5))
+	fmt.Println(pow(7, 3))
 
-	fmt.Println(primeNumber(1000000007))
-	fmt.Println(primeNumber(13))
-	fmt.Println(primeNumber(17))
-	fmt.Println(primeNumber(20))
-	fmt.Println(primeNumber(35))
+	// fmt.Println(primeNumber(1000000007))
+	// fmt.Println(primeNumber(13))
+	// fmt.Println(primeNumber(17))
+	// fmt.Println(primeNumber(20))
+	// fmt.Println(primeNumber(35))
 
 }
 
@@ -38,12 +38,11 @@ func primeNumber(number int) bool {
 	return true
 }
 
-func pow(x, n int) int {
-	var nilai int
-	var total int = 1
-	nilai = x
-	for i := 0; i < n; i++ {
-		total = total * nilai
-	}
-	return total
+func pow(x, n int) int { //linear O(1)
+	xx := float64(x)
+	nn := float64(n)
+	result := float64(math.Pow(xx,nn))
+
+	return int(result)
+	
 }
