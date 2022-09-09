@@ -10,6 +10,9 @@
 
 # - Time Complexity
 
-## - Tentang berapa lama komputer dapat mengerjakan tugas seperti operasi artimatika penjumlahan perkalian pengurangan dan pembagian. Dan juga melakukan perbandingan ataupun pemberian nilai
+## - Tentang seberapa lama komputer dapat mengerjakan tugas seperti operasi artimatika penjumlahan perkalian pengurangan dan pembagian. Dan juga melakukan perbandingan ataupun pemberian nilai
 
 ## - untuk mengukur time complexity bisa mengambil operasi yang paling dominan dari suatu kegiatan contohnya yaitu operasi perulangan
+
+# - Space Complexity
+## Merupakan seberapa besar memori yang dibutuhkan ketika komputer mengerjakan tugas / mengeksekusi kode
