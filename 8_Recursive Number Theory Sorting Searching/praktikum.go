@@ -10,13 +10,17 @@ import (
 func main() {
 	// searching()
 
-	fmt.Println(primeX(1))
-	fmt.Println(primeX(5))
-	fmt.Println(primeX(8))
-	fmt.Println(primeX(9))
-	fmt.Println(primeX(10))
+	// fmt.Println(primeX(1))
+	// fmt.Println(primeX(5))
+	// fmt.Println(primeX(8))
+	// fmt.Println(primeX(9))
+	// fmt.Println(primeX(10))
 
-	// fmt.Println()
+	fmt.Println(fibonacci(0))
+	fmt.Println(fibonacci(2))
+	fmt.Println(fibonacci(9))
+	fmt.Println(fibonacci(10))
+	fmt.Println(fibonacci(12))
 }
 
 func primeX(number int) int {
@@ -62,9 +66,15 @@ func cekBilPrima(number int) bool {
 	}
 
 }
-// func fibonacci(number int) int {
+func fibonacci(number int) int {
+	
+	if number <= 1 {
+		return number
+	}
 
-// }
+	return fibonacci(number-1) + fibonacci(number-2)
+
+}
 
 // func searching() bool {
 // 	element := []int{11, 22, 55, 33, 44, 12, 54, 66}
