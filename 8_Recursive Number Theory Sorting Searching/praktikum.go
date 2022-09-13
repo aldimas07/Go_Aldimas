@@ -21,9 +21,34 @@ func main() {
 	// fmt.Println(fibonacci(10))
 	// fmt.Println(fibonacci(12))
 
-	primaSegiEmpat(2, 3, 13)
-	primaSegiEmpat(5, 2, 1)
-	
+	// primaSegiEmpat(2, 3, 13)
+	// primaSegiEmpat(5, 2, 1)
+
+	fmt.Println(MaxSequence([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
+	fmt.Println(MaxSequence([]int{-2, 5, 6, -2, -3, 1, 5, -6}))
+	fmt.Println(MaxSequence([]int{-2, -3, 4, -1, -2, 1, 5, -3}))
+	fmt.Println(MaxSequence([]int{-2, -5, 6, -2, -3, 1, 6, -6}))
+	fmt.Println(MaxSequence([]int{-2, -5, 6, 2, -3, 1, 6, -6}))
+
+}
+
+func MaxSequence(data []int) int {
+	var total int = 0
+	if len(data)%2 == 0 {
+		var mid int = len(data)/2 - 1
+
+		for i := mid - 1; i <= mid+3; i++ {
+			total += data[i]
+		}
+
+	} else {
+		var mid int = len(data) / 2
+		for i := mid - 1; i <= mid+2; i++ {
+			total += data[i]
+		}
+	}
+	return total
+
 }
 
 func primeX(number int) int {
@@ -36,16 +61,15 @@ func primeX(number int) int {
 	var jumlah int = 1
 	var i int = 1
 
-	for jumlah <= number{
-		if cekBilPrima(i){
+	for jumlah <= number {
+		if cekBilPrima(i) {
 			jumlah++
 		}
 		i++
 	}
-	return i-1
+	return i - 1
 
 }
-
 
 func cekBilPrima(number int) bool {
 	var bagi int
@@ -69,7 +93,7 @@ func cekBilPrima(number int) bool {
 
 }
 func fibonacci(number int) int {
-	
+
 	if number <= 1 {
 		return number
 	}
@@ -79,14 +103,14 @@ func fibonacci(number int) int {
 }
 
 func cekStartPrime(start int) int {
-		if cekBilPrima(start) {
-			return start
-		}
-		return cekStartPrime(1 + start)
+	if cekBilPrima(start) {
+		return start
+	}
+	return cekStartPrime(1 + start)
 
 }
 
-func primaSegiEmpat(high, wide, start int){
+func primaSegiEmpat(high, wide, start int) {
 	var total int
 
 	for i := 0; i < wide; i++ {
@@ -106,19 +130,3 @@ func primaSegiEmpat(high, wide, start int){
 }
 
 
-// func searching() bool {
-// 	element := []int{11, 22, 55, 33, 44, 12, 54, 66}
-// 	nilai := 66
-
-// 	pencarian := sort.SearchInts(element, nilai)
-
-// 	if nilai == element[pencarian] {
-// 		res := true
-// 		fmt.Println("Ketemu", element[pencarian], res)
-// 		return res
-// 	} else {
-// 		fmt.Println("Tidak ketemu", element[pencarian])
-// 		res := false
-// 		return res
-// 	}
-// }
