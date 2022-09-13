@@ -24,11 +24,17 @@ func main() {
 	// primaSegiEmpat(2, 3, 13)
 	// primaSegiEmpat(5, 2, 1)
 
-	fmt.Println(MaxSequence([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
-	fmt.Println(MaxSequence([]int{-2, 5, 6, -2, -3, 1, 5, -6}))
-	fmt.Println(MaxSequence([]int{-2, -3, 4, -1, -2, 1, 5, -3}))
-	fmt.Println(MaxSequence([]int{-2, -5, 6, -2, -3, 1, 6, -6}))
-	fmt.Println(MaxSequence([]int{-2, -5, 6, 2, -3, 1, 6, -6}))
+	// fmt.Println(MaxSequence([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
+	// fmt.Println(MaxSequence([]int{-2, 5, 6, -2, -3, 1, 5, -6}))
+	// fmt.Println(MaxSequence([]int{-2, -3, 4, -1, -2, 1, 5, -3}))
+	// fmt.Println(MaxSequence([]int{-2, -5, 6, -2, -3, 1, 6, -6}))
+	// fmt.Println(MaxSequence([]int{-2, -5, 6, 2, -3, 1, 6, -6}))
+
+	fmt.Println(findMinAndMax([]int{5,7,4,-2,-1,8}))
+	fmt.Println(findMinAndMax([]int{2,-5,-4,22,7,7}))
+	fmt.Println(findMinAndMax([]int{4,3,9,4,-21,7}))
+	fmt.Println(findMinAndMax([]int{-1,5,6,4,2,18}))
+	fmt.Println(findMinAndMax([]int{-2,5,-7,4,7,-20}))
 
 }
 
@@ -129,4 +135,22 @@ func primaSegiEmpat(high, wide, start int) {
 	fmt.Print("\n\n")
 }
 
+func findMinAndMax(arr []int) string {
+	var min int = arr[0]
+	var max int = arr[0]
+
+	var indexmin int
+	var indexmax int
+
+	for i := 1; i < len(arr); i++ {
+		if arr[i] < min {
+			min = arr[i]
+			indexmin = i
+		} else if arr[i] > max {
+			max = arr[i]
+			indexmax = i
+		}
+	}
+	return fmt.Sprintf("min: %d index: %d max: %d index: %d", min,indexmin,max,indexmax)
+}
 
