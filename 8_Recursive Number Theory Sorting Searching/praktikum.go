@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
-	// "sort"
+	"sort"
 )
 
 func main() {
@@ -30,11 +30,17 @@ func main() {
 	// fmt.Println(MaxSequence([]int{-2, -5, 6, -2, -3, 1, 6, -6}))
 	// fmt.Println(MaxSequence([]int{-2, -5, 6, 2, -3, 1, 6, -6}))
 
-	fmt.Println(findMinAndMax([]int{5,7,4,-2,-1,8}))
-	fmt.Println(findMinAndMax([]int{2,-5,-4,22,7,7}))
-	fmt.Println(findMinAndMax([]int{4,3,9,4,-21,7}))
-	fmt.Println(findMinAndMax([]int{-1,5,6,4,2,18}))
-	fmt.Println(findMinAndMax([]int{-2,5,-7,4,7,-20}))
+	// fmt.Println(findMinAndMax([]int{5,7,4,-2,-1,8}))
+	// fmt.Println(findMinAndMax([]int{2,-5,-4,22,7,7}))
+	// fmt.Println(findMinAndMax([]int{4,3,9,4,-21,7}))
+	// fmt.Println(findMinAndMax([]int{-1,5,6,4,2,18}))
+	// fmt.Println(findMinAndMax([]int{-2,5,-7,4,7,-20}))
+
+	MaximumBuyProduct(50000, []int{25000,25000,10000,14000})
+	MaximumBuyProduct(30000, []int{15000,10000,12000,5000,3000})
+	MaximumBuyProduct(10000, []int{2000,3000,1000,2000,10000})
+	MaximumBuyProduct(4000, []int{7500,3000,2500,3000})
+	MaximumBuyProduct(0, []int{10000,30000})
 
 }
 
@@ -154,3 +160,18 @@ func findMinAndMax(arr []int) string {
 	return fmt.Sprintf("min: %d index: %d max: %d index: %d", min,indexmin,max,indexmax)
 }
 
+func MaximumBuyProduct(money int, productPrice []int) int {
+	var i int
+	var jmlmax int
+	var res int
+	sort.Ints(productPrice)
+
+	for money >=0 && i <len(productPrice) {
+		money -= productPrice[i]
+		jmlmax++
+		i++
+	}
+	res = jmlmax -1
+	fmt.Println(res)
+	return res
+}
