@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "af75800e-4e00-4760-a9be-e371fb71d422",
+		"name": "News API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22945961"
+	},
+	"item": [
+		{
+			"name": "Get Top Headlines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/top-headlines?country=us&apiKey=4fc4499cd4e749e9aebab6a8c4160436",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"top-headlines"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "us"
+						},
+						{
+							"key": "apiKey",
+							"value": "4fc4499cd4e749e9aebab6a8c4160436"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get With Sorting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=Apple&from=2022-09-31&sortBy=popularity&apiKey=4fc4499cd4e749e9aebab6a8c4160436",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Apple"
+						},
+						{
+							"key": "from",
+							"value": "2022-09-31"
+						},
+						{
+							"key": "sortBy",
+							"value": "popularity"
+						},
+						{
+							"key": "apiKey",
+							"value": "4fc4499cd4e749e9aebab6a8c4160436"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News From BBC News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=4fc4499cd4e749e9aebab6a8c4160436",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"top-headlines"
+					],
+					"query": [
+						{
+							"key": "sources",
+							"value": "bbc-news"
+						},
+						{
+							"key": "apiKey",
+							"value": "4fc4499cd4e749e9aebab6a8c4160436"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Sources",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/top-headlines/sources?apiKey=4fc4499cd4e749e9aebab6a8c4160436",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"top-headlines",
+						"sources"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "4fc4499cd4e749e9aebab6a8c4160436"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News With Category Technology",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/top-headlines/sources?category=technology&apiKey=4fc4499cd4e749e9aebab6a8c4160436",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"top-headlines",
+						"sources"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "technology"
+						},
+						{
+							"key": "apiKey",
+							"value": "4fc4499cd4e749e9aebab6a8c4160436"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get People by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/people?id=50",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"people"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Films by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/films/:id/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"films",
+						":id",
+						""
+					],
+					"query": [
+						{
+							"key": ":id",
+							"value": "1",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Starship",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/starships/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"starships",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Planets by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/planets/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"planets",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Species by ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "https://swapi.dev/api/",
+			"type": "string"
+		}
+	]
+}

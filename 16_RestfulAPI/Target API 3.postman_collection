@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "418892eb-e458-41e0-a5b3-39992d813d46",
+		"name": "api-swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22945961"
+	},
+	"item": [
+		{
+			"name": "Get Auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/token?client_id=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc&client_secret=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc",
+					"protocol": "https",
+					"host": [
+						"virtserver",
+						"swaggerhub",
+						"com"
+					],
+					"path": [
+						"sepulsa",
+						"RentABook-API",
+						"1.0.0",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc"
+						},
+						{
+							"key": "client_secret",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client/:client_id",
+					"protocol": "https",
+					"host": [
+						"virtserver",
+						"swaggerhub",
+						"com"
+					],
+					"path": [
+						"sepulsa",
+						"RentABook-API",
+						"1.0.0",
+						"client",
+						":client_id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "client_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_id\":\"123334\",\r\n    \"client_key\":\"CLIENT1234\",\r\n    \"client_secret\":\"SECRET1234\",\r\n    \"status\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client/1",
+					"protocol": "https",
+					"host": [
+						"virtserver",
+						"swaggerhub",
+						"com"
+					],
+					"path": [
+						"sepulsa",
+						"RentABook-API",
+						"1.0.0",
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 12,\r\n  \"client_key\": \"CLIENT12\",\r\n  \"client_secret\": \"SECRET012\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/client",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/client/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"client",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0",
+			"type": "string"
+		}
+	]
+}
