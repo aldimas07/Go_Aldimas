@@ -25,7 +25,7 @@ func main() {
 	e.GET("/books", controllers.GetBookController)
 	e.GET("/books/:id", controllers.GetBookControllerID)
 	e.POST("/books/", controllers.CreateBookController)
-	e.DELETE("/books/:id", controllers.DeleteUserController)
+	e.DELETE("/books/:id", controllers.DeleteBookController)
 	e.PUT("books/:id", controllers.UpdateBookController)
 
 	
