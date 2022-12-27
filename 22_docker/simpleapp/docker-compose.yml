@@ -9,7 +9,7 @@ services:
     networks:
       - mynetwork
     depends_on:
-      - localhost
+      - mysql-server
 
   localhost:
     image: mysql:latest
