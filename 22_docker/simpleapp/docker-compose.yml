@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  simpleapp-services:
+    build: .
+    ports:
+      - 1323:1323
+    restart: on-failure
+    networks:
+      - mynetwork
+    depends_on:
+      - localhost
+
+  localhost:
+    image: mysql:latest
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 3306
+    volumes:
+      - ./drivers/mysql:/var/lib/mysql
+      - ./mysql/schema.sql:/data/application/init.sql
+    command: --init-file /data/application/init.sql
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+      

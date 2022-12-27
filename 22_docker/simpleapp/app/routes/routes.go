@@ -20,7 +20,7 @@ func (cl *ControllerList) RouteRegister(e *echo.Echo) {
 	// Login
 	auth.POST("/login", cl.UserController.Login) // /v1/auth/login
 	// SignUp
-	auth.POST("/register", cl.UserController.Register) // v1/auth/register
+	auth.POST("/signup", cl.UserController.Register) // v1/auth/register
 	usersAdmin := v1.Group("/admin/users",middleware.JWTWithConfig(cl.JWTMiddleware)) // /v1/admins/users
 	usersAdmin.GET("", cl.UserController.GetAll)
   //logout

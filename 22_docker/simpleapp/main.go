@@ -9,7 +9,7 @@ import (
 	"sync"
 	"syscall"
 	"time"
-	
+
 	_userUseCase "Go_Aldimas/22_docker/simpleapp/businesses/users"
 	_userController "Go_Aldimas/22_docker/simpleapp/controllers/users"
 
@@ -20,9 +20,9 @@ import (
 	_dbDriver "Go_Aldimas/22_docker/simpleapp/drivers/mysql"
 
 	util "Go_Aldimas/22_docker/simpleapp/utils"
+
 	"github.com/labstack/echo/v4"
 )
-
 
 type operation func(ctx context.Context) error
 
@@ -49,18 +49,14 @@ func main() {
 
 	e := echo.New()
 
-
 	userRepo := _driverFactory.NewUserRepository(db)
 	userUseCase := _userUseCase.NewUserUsecase(userRepo, &configJWT)
 	userCtrl := _userController.NewUserController(userUseCase)
 
-
-
 	routesInit := _routes.ControllerList{
-		LoggerMiddleware:      configLogger.Init(),
-		JWTMiddleware:         configJWT.Init(),
-		UserController:        *userCtrl,
-
+		LoggerMiddleware: configLogger.Init(),
+		JWTMiddleware:    configJWT.Init(),
+		UserController:   *userCtrl,
 	}
 	routesInit.RouteRegister(e)
 

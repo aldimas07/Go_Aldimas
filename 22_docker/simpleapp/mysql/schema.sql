@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS cobadocker;
+CREATE DATABASE if NOT EXISTS cobadocker_test;

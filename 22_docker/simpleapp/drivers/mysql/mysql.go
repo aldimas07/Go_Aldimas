@@ -21,21 +21,22 @@ type ConfigDB struct {
 
 
 func (config *ConfigDB) InitDB() *gorm.DB {
-	// connectionString := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Shanghai",
-	// 	config.DB_HOST,
-	// 	config.DB_USERNAME,
-	// 	config.DB_PASSWORD,
-	// 	config.DB_NAME,
-	// 	config.DB_PORT,
-	// )
-	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
+
+	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4",
 	config.DB_USERNAME,
 	config.DB_PASSWORD,
 	config.DB_HOST,
 	config.DB_PORT,
 	config.DB_NAME,
 )
-
+// 	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4",
+// 	"root",
+// 	"",
+// 	"mysql-server",
+// 	"3306",
+// 	"cobadocker",
+// )
+	
 	db, err := gorm.Open(mysql.Open(connectionString), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("error when connecting to a database server: %s", err)
